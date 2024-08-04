@@ -1,0 +1,299 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  background-color: #f8f9fa;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.navWrapper {
+  padding-block: 1.5rem;
+  padding-inline: 18rem;
+  display: flex;
+  align-items: center;
+  background: #edf2f4;
+  justify-content: space-between;
+  box-shadow: 0px 1px 20px 0px #72727275;
+}
+
+.navWrapper .logo {
+  top: 0;
+  left: inherit;
+  position: fixed;
+  color: #4361ee;
+  font-size: 2.8rem;
+  font-weight: bolder;
+  transition: 0.5s ease;
+}
+
+.navWrapper .logo:hover {
+  transform: scale(1.2);
+}
+
+.menu {
+  display: none;
+}
+
+.navWrapper #navigation {
+  display: flex;
+}
+
+.navlist a {
+  color: #343a40;
+  padding-left: 4rem;
+  transition: 0.3s ease-in;
+  font: 500 1.2rem "Poppins", sans-serif;
+}
+
+.navlist a:hover {
+  color: #4361ee;
+}
+
+#mainContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-inline: 2rem;
+  justify-content: space-evenly;
+}
+
+.content {
+  background: antiquewhite;
+  width: 40%;
+  height: 51vh;
+  display: grid;
+  place-content: center;
+}
+
+.content h1 {
+  margin-block: 1rem;
+  font: 600 2.5rem/1 "Poppins", sans-serif;
+}
+
+.icon {
+  color: #4361ee;
+  font-size: 5rem;
+}
+
+.content span {
+  font: 500 1.3rem "Poppins", sans-serif;
+  display: block;
+}
+
+span:nth-child(3) {
+  margin-block-end: 1rem;
+}
+
+.gameEnviroment form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-block-end: 1.5rem;
+  justify-content: space-around;
+}
+
+#guess {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.guessField,
+.guessSubmit,
+#newGame {
+  width: 250px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  margin-block-start: 1rem;
+  border: 1px solid #4361ee;
+}
+
+.guessSubmit:hover,
+#newGame:hover {
+  background-color: #4361ee;
+  color: #fff;
+}
+
+.resultParas {
+  width: 100%;
+  max-width: 350;
+  height: 300px;
+  padding: 1rem;
+  color: #f8f9fa;
+  font-size: 1.3rem;
+  background-color: #212529;
+}
+
+.lowOrHi {
+  font-weight: 500;
+  line-height: 1.2;
+  color: #f07167;
+  font-size: 1.2rem;
+  margin-block-start: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* ====== Mobile Devices Responsive ====== */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .navWrapper {
+    padding-block: 1rem;
+    padding-inline: 2rem;
+  }
+
+  .navWrapper .logo {
+    color: #4361ee;
+    font-size: 1.6rem;
+    font-weight: bolder;
+  }
+
+  .navWrapper .logo {
+    position: inherit;
+    color: #4361ee;
+    font-size: 1.6rem;
+    font-weight: bolder;
+  }
+
+  #mainContainer {
+    height: 170vh;
+    flex-direction: column;
+  }
+
+  .content {
+    width: 100%;
+    height: auto;
+    display: grid;
+    text-align: center;
+    margin-block: 1.5rem;
+    place-items: center;
+    padding: 1.2rem;
+    background: antiquewhite;
+  }
+
+  .navWrapper #navigation {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #212529;
+    transition: 0.3s ease-in;
+  }
+
+  .menu:hover {
+    color: #4361ee;
+    transform: rotate(45deg);
+  }
+}
+
+/* ====== Tablet Devices Responsive ====== */
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .navWrapper {
+    padding-block: 1.5rem;
+    padding-inline: 8rem;
+  }
+
+  .navWrapper .logo {
+    position: inherit;
+    color: #4361ee;
+    font-size: 1.8rem;
+    font-weight: bolder;
+  }
+
+  #mainContainer {
+    height: 120vh;
+    flex-direction: column;
+    padding-block: 1.5rem;
+    padding-inline: 8rem;
+  }
+
+  .content {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    place-items: center;
+    padding: 1rem;
+    background: antiquewhite;
+  }
+
+  .navWrapper #navigation {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+    font-size: 2.2rem;
+    cursor: pointer;
+    color: #212529;
+    transition: 0.3s ease-in;
+  }
+
+  .menu:hover {
+    color: #4361ee;
+    transform: rotate(45deg);
+  }
+
+  .resultParas {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    padding: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1440px) {
+  .navWrapper {
+    padding-block: 1.5rem;
+    padding-inline: 8rem;
+  }
+
+  .navWrapper .logo {
+    position: inherit;
+    color: #4361ee;
+    font-size: 1.8rem;
+    font-weight: bolder;
+  }
+
+  #mainContainer {
+    height: 100vh;
+    padding-block-start: 7rem;
+    padding-inline: 2rem;
+  }
+
+  .content {
+    width: 50%;
+    padding: 1rem;
+    background: #edf2f4;
+    box-shadow: 2px 2px 14px #72727275, -2px -2px 14px #cecece33;
+  }
+
+  .navWrapper #navigation {
+    display: inherit;
+  }
+}

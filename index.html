@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GameApp</title>
+
+  <!-- google fonts link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div class="app">
+    <article>
+      <header>
+        <nav class="navWrapper">
+          <div>
+            <a href="#" class="logo">.ag</a>
+          </div>
+
+          <ion-icon name="grid-outline" class="menu"></ion-icon>
+
+          <ul id="navigation">
+            <li class="navlist">
+              <a href="#" style="color: #4361ee; font-weight: 500">Home</a>
+            </li>
+            <li class="navlist"><a href="#">About</a></li>
+            <li class="navlist"><a href="#">Contact-Us</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main id="mainContainer">
+        <div class="content">
+          <h1>Number Guessing Game</h1>
+          <span>Try and guess a random numer between 1 and 100.</span>
+          <span>You have only 10 attempts to guess the right number.</span>
+
+          <ion-icon name="game-controller-outline" class="icon"></ion-icon>
+        </div>
+
+        <div class="gameEnviroment">
+          <form action="">
+            <label for="guessField" id="guess">!Please, Guess A Number</label>
+            <input type="text" id="guessField" class="guessField" />
+
+            <button id="submit" class="guessSubmit" value="Submit">
+              SUBMIT
+            </button>
+          </form>
+
+          <div class="resultParas">
+            <p>Previous Guesses : <span class="guesses"></span></p>
+            <p>Guesses Remaining : <span class="lastResult">5</span></p>
+            <p class="lowOrHi">Choose an excellent number 🙂</p>
+          </div>
+        </div>
+      </main>
+    </article>
+  </div>
+
+  <script src="/script.js"></script>
+
+  <!-- ionicon Link  -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
